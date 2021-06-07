@@ -7,17 +7,18 @@ const {main} = globalStyle(colors);
 
 export const styles = StyleSheet.create({
   imageStyle: {
-    height: hp(300),
-    width: wp(360),
+    height: hp(209),
+    width: wp(236),
   },
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: colors.blue,
   },
   contentContainer: {
     width: deviceWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
     height: hp(600),
-    marginTop: hp(100),
   },
   paginationWrapper: {
     position: 'absolute',

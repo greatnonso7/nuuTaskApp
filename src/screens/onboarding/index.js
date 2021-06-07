@@ -40,7 +40,7 @@ const Onboarding = ({navigation: {navigate}}) => {
             style={styles.imageStyle}
           />
           <View style={styles.textContainer}>
-            <Text style={styles.text}>Learn in the comfort of your home</Text>
+            <Text style={styles.text}>Say goodbye to paper receipts</Text>
           </View>
         </View>
         <View style={styles.contentContainer}>
