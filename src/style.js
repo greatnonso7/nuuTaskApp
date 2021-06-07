@@ -1,464 +1,310 @@
-import {wp, hp} from './shared/resposive-dimension';
-import {isIOS} from './utils';
+import {normalColors as colors, normalColors} from './colors';
+import {hp} from './shared/responsive-dimension';
 
 const font = {
-  fontFamily: 'Inter-Regular',
+  fontFamily: 'Montserrat-Regular',
 };
 
-export const bold = isIOS
-  ? {
-      fontFamily: 'Inter-Regular',
-      fontWeight: 'bold',
-    }
-  : {
-      fontFamily: 'Inter-Bold',
-    };
-
-export const semiBold = isIOS
-  ? {
-      fontFamily: 'Inter-Regular',
-      fontWeight: '600',
-    }
-  : {
-      fontFamily: 'Inter-SemiBold',
-    };
-
-export const light = isIOS
-  ? {
-      fontFamily: 'Inter-Regular',
-      fontWeight: '300',
-    }
-  : {
-      fontFamily: 'Inter-Light',
-    };
-
-export const normal = {
-  fontFamily: 'Inter-Regular',
+export const light = {
+  fontFamily: 'Montserrat-Light',
+  color: colors.dark,
 };
 
-export const appFont = {
-  fontFamily: 'Inter-Regular',
+export const regular = {
+  fontFamily: 'Montserrat-Regular',
+  color: colors.grey700,
 };
 
-const biggerFont = {
-  ...font,
-  fontSize: hp(20),
-  lineHeight: hp(30),
+export const medium = {
+  fontFamily: 'Montserrat-Medium',
+  color: colors.dark,
 };
 
-const bigFont = {
-  ...font,
-  fontSize: hp(16),
-  lineHeight: hp(24),
+export const semiBold = {
+  fontFamily: 'Montserrat-SemiBold',
+  color: colors.dark,
 };
 
-const normalFont = {
-  ...font,
-  fontSize: hp(14),
-  lineHeight: hp(21),
+export const bold = {
+  fontFamily: 'Montserrat-Bold',
+  color: colors.dark,
 };
 
-const smallFont = {
-  ...font,
-  fontSize: hp(12),
-  lineHeight: hp(18),
-};
-
-const buttonSolid = {
-  height: 48,
-  borderRadius: 8,
-};
-
-export const globalStyle = colors => ({
+export const globalStyle = (colors = normalColors) => ({
   colors,
   font,
   light,
+  regular,
   semiBold,
   bold,
-  buttonSolid,
+  medium,
   main: {
-    //new sizes
+    //Light Text sizes
     lightText10: {
       fontSize: hp(10),
       lineHeight: hp(15),
       ...light,
-      color: colors.dark,
     },
 
     lightText12: {
       fontSize: hp(12),
       lineHeight: hp(18),
       ...light,
-      color: colors.dark,
     },
 
     lightText14: {
       fontSize: hp(14),
       lineHeight: hp(21),
       ...light,
-      color: colors.dark,
     },
 
     lightText16: {
       fontSize: hp(16),
       lineHeight: hp(24),
       ...light,
-      color: colors.dark,
     },
 
     lightText20: {
       fontSize: hp(20),
       lineHeight: hp(30),
       ...light,
-      color: colors.dark,
     },
 
     lightText24: {
       fontSize: hp(24),
       lineHeight: hp(36),
       ...light,
-      color: colors.dark,
     },
     lightText28: {
       fontSize: hp(28),
       lineHeight: hp(42),
       ...light,
-      color: colors.dark,
     },
     lightText36: {
       fontSize: hp(36),
       lineHeight: hp(54),
       ...light,
-      color: colors.dark,
     },
-
-    //light
-    boldText10: {
+    lightText40: {
+      fontSize: hp(40),
+      lineHeight: hp(64),
+      ...light,
+    },
+    //Regular/Normal Text sizes
+    regularText10: {
       fontSize: hp(10),
       lineHeight: hp(15),
-      ...bold,
-      color: colors.dark,
+      ...regular,
     },
 
-    boldText12: {
+    regularText12: {
       fontSize: hp(12),
       lineHeight: hp(18),
-      ...bold,
-      color: colors.dark,
+      ...regular,
     },
 
-    boldText14: {
+    regularText14: {
       fontSize: hp(14),
       lineHeight: hp(21),
-      ...bold,
-      color: colors.dark,
+      ...regular,
     },
 
-    boldText16: {
+    regularText16: {
       fontSize: hp(16),
       lineHeight: hp(24),
-      ...bold,
-      color: colors.dark,
+      ...regular,
     },
 
-    boldText20: {
+    regularText18: {
+      fontSize: hp(18),
+      lineHeight: hp(28),
+      ...regular,
+    },
+
+    regularText20: {
       fontSize: hp(20),
       lineHeight: hp(30),
-      ...bold,
-      color: colors.dark,
+      ...regular,
     },
 
-    boldText22: {
-      fontSize: hp(22),
-      lineHeight: hp(33),
-      ...bold,
-      color: colors.dark,
-    },
-
-    boldText24: {
+    regularText24: {
       fontSize: hp(24),
       lineHeight: hp(36),
-      ...bold,
-      color: colors.dark,
+      ...regular,
     },
-
-    boldText28: {
+    regularText28: {
       fontSize: hp(28),
       lineHeight: hp(42),
-      ...bold,
-      color: colors.dark,
+      ...regular,
     },
-    boldText36: {
+    regularText36: {
       fontSize: hp(36),
       lineHeight: hp(54),
-      ...bold,
-      color: colors.dark,
+      ...regular,
+    },
+    regularText40: {
+      fontSize: hp(40),
+      lineHeight: hp(64),
+      ...regular,
+    },
+    //Medium Text sizes
+    mediumText10: {
+      fontSize: hp(10),
+      lineHeight: hp(15),
+      ...medium,
     },
 
-    //blue
+    mediumText12: {
+      fontSize: hp(12),
+      lineHeight: hp(18),
+      ...medium,
+    },
+
+    mediumText14: {
+      fontSize: hp(14),
+      lineHeight: hp(21),
+      ...medium,
+    },
+
+    mediumText16: {
+      fontSize: hp(16),
+      lineHeight: hp(24),
+      ...medium,
+    },
+
+    mediumText20: {
+      fontSize: hp(20),
+      lineHeight: hp(30),
+      ...medium,
+    },
+
+    mediumText24: {
+      fontSize: hp(24),
+      lineHeight: hp(36),
+      ...medium,
+    },
+    mediumText28: {
+      fontSize: hp(28),
+      lineHeight: hp(42),
+      ...medium,
+    },
+    mediumText36: {
+      fontSize: hp(36),
+      lineHeight: hp(54),
+      ...medium,
+    },
+    mediumText40: {
+      fontSize: hp(40),
+      lineHeight: hp(64),
+      ...medium,
+    },
+    //Semibold Text sizes
     semiBoldText10: {
       fontSize: hp(10),
       lineHeight: hp(15),
       ...semiBold,
-      color: colors.dark,
     },
 
     semiBoldText12: {
       fontSize: hp(12),
       lineHeight: hp(18),
       ...semiBold,
-      color: colors.dark,
     },
 
     semiBoldText14: {
       fontSize: hp(14),
       lineHeight: hp(21),
       ...semiBold,
-      color: colors.dark,
     },
 
     semiBoldText16: {
       fontSize: hp(16),
       lineHeight: hp(24),
       ...semiBold,
-      color: colors.dark,
+    },
+    semiBoldText18: {
+      fontSize: hp(18),
+      lineHeight: hp(28),
+      ...semiBold,
     },
 
     semiBoldText20: {
       fontSize: hp(20),
       lineHeight: hp(30),
       ...semiBold,
-      color: colors.dark,
     },
     semiBoldText24: {
       fontSize: hp(24),
       lineHeight: hp(36),
       ...semiBold,
-      color: colors.dark,
     },
     semiBoldText28: {
       fontSize: hp(28),
       lineHeight: hp(42),
       ...semiBold,
-      color: colors.dark,
     },
     semiBoldText36: {
       fontSize: hp(36),
       lineHeight: hp(54),
       ...semiBold,
-      color: colors.dark,
     },
-
-    //white
-    normalText10: {
+    semiBoldText40: {
+      fontSize: hp(40),
+      lineHeight: hp(64),
+      ...semiBold,
+    },
+    //Bold Text sizes
+    boldText10: {
       fontSize: hp(10),
       lineHeight: hp(15),
-      ...normal,
-      color: colors.dark,
+      ...bold,
     },
 
-    normalText12: {
+    boldText12: {
       fontSize: hp(12),
       lineHeight: hp(18),
-      ...normal,
-      color: colors.dark,
+      ...bold,
     },
 
-    normalText13: {
-      fontSize: hp(13),
-      lineHeight: hp(19),
-      ...normal,
-      color: colors.dark,
-    },
-
-    normalText14: {
+    boldText14: {
       fontSize: hp(14),
       lineHeight: hp(21),
-      ...normal,
-      color: colors.dark,
+      ...bold,
     },
 
-    normalText16: {
+    boldText16: {
       fontSize: hp(16),
       lineHeight: hp(24),
-      ...normal,
-      color: colors.dark,
+      ...bold,
     },
 
-    normalText20: {
+    boldText20: {
       fontSize: hp(20),
       lineHeight: hp(30),
-      ...normal,
-      color: colors.dark,
+      ...bold,
     },
 
-    normalText24: {
+    boldText24: {
       fontSize: hp(24),
       lineHeight: hp(36),
-      ...normal,
-      color: colors.dark,
+      ...bold,
     },
-    normalText28: {
+
+    boldText28: {
       fontSize: hp(28),
       lineHeight: hp(42),
-      ...normal,
-      color: colors.dark,
+      ...bold,
     },
-    normalText36: {
+
+    boldText36: {
       fontSize: hp(36),
       lineHeight: hp(54),
-      ...normal,
-      color: colors.dark,
-    },
-
-    //oldText
-    biggerWhiteFont: {
-      color: colors.white,
-      ...biggerFont,
-    },
-    biggerDarkFont: {
-      color: colors.dark,
-      ...biggerFont,
-    },
-    biggerGrayFont: {
-      color: colors.secondary,
-      ...biggerFont,
-    },
-    biggerBlueFont: {
-      color: colors.primary,
-      ...biggerFont,
-    },
-
-    bigWhiteFont: {
-      color: colors.white,
-      ...bigFont,
-    },
-    bigDarkFont: {
-      color: colors.dark,
-      ...bigFont,
-    },
-    bigGrayFont: {
-      color: colors.secondary,
-      ...bigFont,
-    },
-    bigBlueFont: {
-      color: colors.primary,
-      ...bigFont,
-    },
-
-    smallWhiteFont: {
-      color: colors.white,
-      ...smallFont,
-    },
-    smallDarkFont: {
-      color: colors.dark,
-      ...smallFont,
-    },
-    smallGrayFont: {
-      color: colors.secondary,
-      ...smallFont,
-    },
-    smallBlueFont: {
-      color: colors.primary,
-      ...smallFont,
-    },
-
-    normalWhiteFont: {
-      color: colors.white,
-      ...normalFont,
-    },
-
-    normalDarkFont: {
-      ...normalFont,
-      color: colors.dark,
-    },
-    normalGrayFont: {
-      color: colors.secondary,
-      ...normalFont,
-    },
-    normalBlueFont: {
-      color: colors.primary,
-      ...normalFont,
-    },
-
-    //Medium Texts
-    mediumDarkText: {
-      ...semiBold,
-      color: colors.dark,
-      fontSize: hp(16),
-      lineHeight: hp(24),
-    },
-    //---End of Medium text--//
-
-    //Bold Texts
-    boldWhiteText: {
       ...bold,
-      color: colors.white,
-      fontSize: hp(16),
-      lineHeight: hp(24),
     },
-
-    bgDark: {
-      backgroundColor: colors.dark,
-    },
-    bgBlack: {
-      backgroundColor: colors.black,
-    },
-    bgWhite: {
-      backgroundColor: colors.bgWhite,
-    },
-    bgGray: {
-      backgroundColor: colors.gray,
-    },
-    bgLightGray: {
-      backgroundColor: colors.lightGray,
-    },
-    bgPrimary: {
-      backgroundColor: colors.primary,
-    },
-    bgSuccess: {
-      backgroundColor: colors.success,
-    },
-    textDark: {
-      color: colors.dark,
-      ...font,
-    },
-    textBlack: {
-      color: colors.black,
-      ...font,
-    },
-    textWhite: {
-      color: colors.textWhite,
-      ...font,
-    },
-    textWarning: {
-      color: colors.warning,
-      ...font,
-    },
-    textDanger: {
-      color: colors.danger,
-      ...font,
-    },
-    textPrimary: {
-      color: colors.textPrimary,
-      ...font,
-    },
-    textSuccess: {
-      color: colors.success,
-      ...font,
-    },
-    InterRegular: {
-      fontFamily: 'Inter-Regular',
-    },
-    InterBlack: {
-      fontFamily: 'Inter-Black',
-    },
-    InterBold: {
-      fontFamily: 'Inter-Bold',
-    },
-    buttonSolidPrimary: {
-      backgroundColor: colors.textPrimary,
-      ...buttonSolid,
+    boldText40: {
+      fontSize: hp(40),
+      lineHeight: hp(64),
+      ...bold,
     },
   },
 });
