@@ -1,7 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {View, ScrollView, Text, SafeAreaView, Image} from 'react-native';
+import {
+  View,
+  ScrollView,
+  Text,
+  SafeAreaView,
+  Image,
+  StatusBar,
+} from 'react-native';
 import {styles} from './style';
+import {normalColors as colors} from '../../colors';
 import {sharedImages} from '../../images';
 import {deviceWidth} from '../../shared/responsive-dimension';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -13,6 +21,7 @@ const Onboarding = ({navigation: {navigate}}) => {
     const {currentPage} = sliderState;
     const {x} = event.nativeEvent.contentOffset;
     const indexOfNextScreen = Math.floor(x / deviceWidth);
+    console.log(indexOfNextScreen);
     if (indexOfNextScreen !== currentPage) {
       setSliderState({
         ...sliderState,
@@ -25,6 +34,7 @@ const Onboarding = ({navigation: {navigate}}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" backgroundColor={colors.blue} />
       <ScrollView
         horizontal={true}
         showsHorizontalScrollIndicator={false}
@@ -40,18 +50,8 @@ const Onboarding = ({navigation: {navigate}}) => {
             style={styles.imageStyle}
           />
           <View style={styles.textContainer}>
-            <Text style={styles.text}>Say goodbye to paper receipts</Text>
-          </View>
-        </View>
-        <View style={styles.contentContainer}>
-          <Image
-            source={sharedImages.location}
-            resizeMode="contain"
-            style={styles.imageStyle}
-          />
-          <View style={styles.textContainer}>
             <Text style={styles.text}>
-              Track and score your progress with medical mock exams
+              Say goodbye 👋{'\n'} to paper receipts
             </Text>
           </View>
         </View>
@@ -62,8 +62,18 @@ const Onboarding = ({navigation: {navigate}}) => {
             style={styles.imageStyle}
           />
           <View style={styles.textContainer}>
+            <Text style={styles.text}>Monitor your{'\n'}daily spending</Text>
+          </View>
+        </View>
+        <View style={styles.contentContainer}>
+          <Image
+            source={sharedImages.location}
+            resizeMode="contain"
+            style={styles.imageStyle}
+          />
+          <View style={styles.textContainer}>
             <Text style={styles.text}>
-              Complete different modules and categories
+              Easily access your{'\n'}receipts anywhere
             </Text>
           </View>
         </View>
@@ -82,15 +92,15 @@ const Onboarding = ({navigation: {navigate}}) => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           activeOpacity={0.7}
-          onPress={() => navigate('Login')}
-          style={styles.loginButton}>
-          <Text style={styles.loginText}>Login</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          activeOpacity={0.7}
           onPress={() => navigate('Register')}
           style={styles.registerButton}>
-          <Text style={styles.registerText}>Register</Text>
+          <Text style={styles.loginText}>Get Started</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.loginButton}
+          activeOpacity={0.7}
+          onPress={() => navigate('Login')}>
+          <Text style={styles.registerText}>Login</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
