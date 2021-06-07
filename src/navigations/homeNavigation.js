@@ -1,4 +1,5 @@
 import Welcome from '../screens/onboarding';
+import Login from '../screens/onboarding/login';
 
 export const HomeRoutes = {
   initialRoute: 'Home',
@@ -6,6 +7,14 @@ export const HomeRoutes = {
     {
       name: 'Home',
       component: Welcome,
+      options: {
+        headerShown: false,
+        header: null,
+      },
+    },
+    {
+      name: 'Login',
+      component: Login,
       options: {
         headerShown: false,
         header: null,

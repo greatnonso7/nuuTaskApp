@@ -11,6 +11,11 @@ export const sharedImages = {
   chart: require('./assets/images/Chart.png'),
 
   /**
+   * Icons
+   */
+  eye: require('./assets/images/eye.png'),
+
+  /**
    * Logo
    */
   logo: require('./assets/images/Logo.png'),

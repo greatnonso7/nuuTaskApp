@@ -92,7 +92,7 @@ const Onboarding = ({navigation: {navigate}}) => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           activeOpacity={0.7}
-          onPress={() => navigate('Register')}
+          onPress={() => true}
           style={styles.registerButton}>
           <Text style={styles.loginText}>Get Started</Text>
         </TouchableOpacity>
